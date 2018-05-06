@@ -50,11 +50,4 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    </div> <!-- /container -->
 
   </body>
-  <script type="text/javascript">
-
-      function register(){
-          location.href="<%=basePath%>permission/userInsert";
-      }
-
-  </script>
 </html>
