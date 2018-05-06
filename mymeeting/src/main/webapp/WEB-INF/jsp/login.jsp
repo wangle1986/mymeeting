@@ -32,11 +32,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body class="text-center">
-
-     
-     
-        <div class="container">
-
+	<div class="container">
       <form class="form-signin" role="form" action="<%=basePath%>login" method="post">
         <h2 class="form-signin-heading">登录页面----${requestScope.message }</h2>
         <label for="inputEmail" class="sr-only">请输入用户名</label>
@@ -51,13 +47,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">登录 </button>
       </form>
+   </div> <!-- /container -->
 
-    </div> <!-- /container -->
-
-
-     
-     
-    
   </body>
   <script type="text/javascript">
 
