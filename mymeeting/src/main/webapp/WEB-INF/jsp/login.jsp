@@ -18,20 +18,46 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="description" content="This is my page">
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
 	<script src="<%=basePath%>js/jquery-2.1.4/jquery.min.js"></script>
+	-->
+
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	 	 
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	 
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   
-  <body style="margin-left: 500px"><c:out value=""/>
-     <h1 style="margin-left: 0px">登录页面----${requestScope.message }</h1><br/><br/>
-     <form action="<%=basePath%>login" method="post">
-         用户名 : <input type="text" name="email" id="email"/><br/><br/>
-         密码&nbsp;&nbsp;&nbsp;&nbsp;: <input type="password" name="pswd" id="pswd"/><br/><br/>
-         <input style="margin-left: 80px" type="submit" value="登录"/>
-         &nbsp;&nbsp;&nbsp;&nbsp;
-         <input style="left: 50px" onclick="register()" type="button" value="注册"/>
-     </form>
-     <h1 style="color: red"></h1>
+  <body class="text-center">
+
+     
+     
+        <div class="container">
+
+      <form class="form-signin" role="form" action="<%=basePath%>login" method="post">
+        <h2 class="form-signin-heading">登录页面----${requestScope.message }</h2>
+        <label for="inputEmail" class="sr-only">请输入用户名</label>
+        <input type="text" name="email" id="email" class="form-control" placeholder="请输入用户名" required autofocus>
+        <div class="checkbox">
+        
+        </div>
+        <label for="inputPassword" class="sr-only">请输入密码</label>
+        <input type="password" name="pswd" id="pswd" class="form-control" placeholder="请输入密码" required>
+        <div class="checkbox">
+        
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">登录 </button>
+      </form>
+
+    </div> <!-- /container -->
+
+
+     
+     
+    
   </body>
   <script type="text/javascript">
 
